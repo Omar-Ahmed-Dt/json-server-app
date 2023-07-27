@@ -6,11 +6,11 @@ const jsonData = {
     message: "Hello World"
 };
 
-app.get('/json', (req, res) => {
+app.get('/', (req, res) => {
     res.json(jsonData);
 });
 
 const port = 3000;
 app.listen(port, () => {
-    console.log(`JSON Server App listening at http://localhost:${port}`);
+    console.log(`App 1 is running on http://localhost:${port}`);
 });
