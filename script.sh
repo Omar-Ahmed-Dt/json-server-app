@@ -1,8 +1,7 @@
 #!/bin/bash
 git clone https://github.com/Omar-Ahmed-Dt/json-server-app.git
 cd json-server-app
-docker-compose build
-docker-compose up -d
+docker-compose up --build 
 # wait 60s and check every 1sec 
 timeout 60s bash -c 'while [[ "$(docker-compose ps -q | wc -l)" -ne 3 ]]; do sleep 1; done'
 # print message 
