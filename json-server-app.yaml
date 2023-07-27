@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: json-server-app
+  name: json-server-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: json-server-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: json-server-app
+    spec:
+      containers:
+      - image: omar9289/json-server:v1.0.1
+        name: json-server
+        resources: {}
+status: {}
